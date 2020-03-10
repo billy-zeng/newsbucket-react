@@ -1,5 +1,5 @@
 import React from 'react';
-import Team from './Team/Team.js';
+import TeamCard from './TeamCard/TeamCard.js';
 import './TeamsList.css';
 
 class TeamsList extends React.Component {
@@ -8,7 +8,7 @@ class TeamsList extends React.Component {
     console.log("[TeamList] display teams")
     
     return teams.map(team => {
-      return <Team key={team._id} teamData={team} />
+      return <TeamCard key={team._id} teamData={team} />
     });
   };
 
