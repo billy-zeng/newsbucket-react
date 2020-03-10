@@ -5,7 +5,7 @@ import TeamsContainer from '../containers/TeamsContainer/TeamsContainer';
 import TeamDetail from '../components/TeamDetail/TeamDetail';
 
 const Routes = props => {
-  console.log(props)
+  // console.log(props)
   return (
     <Switch>
       <Route exact path='/' component={Home} />

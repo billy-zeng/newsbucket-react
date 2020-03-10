@@ -1,0 +1,15 @@
+/* h1, h2, h3, h4, h5 {
+  font-family: 'Slabo 27px';
+} */
+
+/* p, small {
+  font-family: 'Bitter';
+} */
+
+.navbar-brand {
+  font-size: 5em;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
