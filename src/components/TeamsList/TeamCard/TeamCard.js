@@ -7,8 +7,8 @@ import './TeamCard.css';
 const TeamCard = props => {
   return(
     <div className="col-md-4 mb-2">
-      <div className="card p-3 m-2">
-        <img className="card-img-top" src={props.teamData.logo} alt={props.teamData.name} height="250" width="250" />
+      <div className="card p-3 m-2 flex align-items-center">
+        <img className="card-img-top" src={props.teamData.logo} alt={props.teamData.name} />
         <div className="card-body">
           <h5 className="card-title"><Link to={`/teams/${props.teamData._id}`}>{props.teamData.name}</Link></h5>
           <h6 className="card-subtitle">{props.teamData.abbrev}</h6>

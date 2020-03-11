@@ -44,13 +44,13 @@ class MainNav extends React.Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <Navbar.Collapse id="navbarTogglerDemo01">
-          {/* <h1 className="mr-1 ml-1 mt-1"><i class="fas fa-basketball-ball"></i></h1> */}
           <Navbar.Brand href="/"><h2 id="page-title">NewsBucket <i className="fas fa-basketball-ball"></i></h2></Navbar.Brand>
           <Nav className="ml-auto mt-2 mt-lg-0">
             {!this.props.currentUser ? (
               <>
-                {/* <li className="nav-item nav-link" onClick={this.handleOpenSignup}>Sign Up</li>
-                <li className="nav-item nav-link" onClick={this.handleOpenLogin}>Log In</li> */}
+                <NavItem>
+                  <Link className="nav-link" href="#" to="/teams">Teams</Link>
+                </NavItem>
                 <NavItem className="nav-link" onClick={this.handleOpenSignup}>Sign Up</NavItem>
                 <NavItem className="nav-link" onClick={this.handleOpenLogin}>Log In</NavItem>
                 <Modal show={this.state.show} onHide={this.handleClose}>
@@ -64,6 +64,9 @@ class MainNav extends React.Component {
               </>
               ) : (
               <>
+                <NavItem>
+                  <Link className="nav-link" href="#" to="/teams">Teams</Link>
+                </NavItem>
                 <NavItem>
                   <Link className="nav-link" href="#" to="/">My Feed</Link>
                 </NavItem>

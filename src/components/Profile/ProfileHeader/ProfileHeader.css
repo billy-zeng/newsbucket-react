@@ -1,0 +1,12 @@
+#profile-overview {
+  height: 10em;
+}
+
+#profile-img-wrapper {
+  margin: 0 1em 1em 0;
+}
+
+#profile-picture {
+  width: 12em;
+  border-radius: 5%;
+}
