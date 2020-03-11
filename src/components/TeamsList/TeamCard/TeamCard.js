@@ -8,11 +8,11 @@ const TeamCard = props => {
     <ul>
       {/* <h4>{props.teamData.name}</h4> */}
       <Link to={`/teams/${props.teamData._id}`}><h4>{props.teamData.name}</h4></Link>
-      <li>{props.teamData.players[0].name}</li>
-      <li>{props.teamData.players[1].name}</li>
-      <li>{props.teamData.players[2].name}</li>
-      <li>{props.teamData.players[3].name}</li>
-      <li>{props.teamData.players[4].name}</li>
+      <li><Link to={`/players/${props.teamData.players[0]._id}`}>{props.teamData.players[0].name}</Link></li>
+      <li><Link to={`/players/${props.teamData.players[1]._id}`}>{props.teamData.players[1].name}</Link></li>
+      <li><Link to={`/players/${props.teamData.players[2]._id}`}>{props.teamData.players[2].name}</Link></li>
+      <li><Link to={`/players/${props.teamData.players[3]._id}`}>{props.teamData.players[3].name}</Link></li>
+      <li><Link to={`/players/${props.teamData.players[4]._id}`}>{props.teamData.players[4].name}</Link></li>
     </ul>
   )
 }
