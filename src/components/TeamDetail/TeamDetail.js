@@ -32,18 +32,7 @@ class TeamDetail extends React.Component {
       <div className="d-flex flex-column align-items-center justify-content-center">
         <TeamDetailHeader teamData={this.state.teamData} />
         <div>
-          <hr/>
           {this.state.teamData? <ArticleContainer data={this.state.teamData} /> : ""}
-          {/* {this.state.articles.length > 0 ? 
-            <ul id="articlesList">
-              <li><a href={this.state.articles[0].url}>{this.state.articles[0].title}</a></li>
-              <li><a href={this.state.articles[1].url}>{this.state.articles[1].title}</a></li>
-              <li><a href={this.state.articles[2].url}>{this.state.articles[2].title}</a></li>
-              <li><a href={this.state.articles[3].url}>{this.state.articles[3].title}</a></li>
-              <li><a href={this.state.articles[4].url}>{this.state.articles[4].title}</a></li>
-            </ul>
-            : "No articles found, please try again."} */}
-        {/* </Container> */}
         </div>
       </div>
     )

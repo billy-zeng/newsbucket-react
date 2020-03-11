@@ -4,3 +4,7 @@
   max-width: 250px;
   max-height: 250px;
 }
+
+#teamDetailCard {
+  border-bottom: 1px solid grey;
+}
