@@ -1,5 +1,4 @@
 import React from 'react';
-// import TeamCard from './TeamCard/TeamCard.js';
 import './ArticleList.css';
 
 class ArticleList extends React.Component {

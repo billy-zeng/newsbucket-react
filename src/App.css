@@ -18,3 +18,7 @@ a:hover {
 li {
   list-style: none;
 }
+
+.like-btn {
+  min-width: 120px;
+}

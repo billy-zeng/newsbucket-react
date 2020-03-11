@@ -1,0 +1,10 @@
+.player-img {
+  border: 1px solid silver;
+  padding: 1em;
+  max-width: 225px;
+  max-height: 225px;
+}
+
+#playerDetailCard {
+  border-bottom: 1px solid grey;
+}

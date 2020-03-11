@@ -12,13 +12,14 @@ const TeamDetailHeader = props => {
         <img class="team-logo" src={props.teamData.logo} alt={props.teamData.name} />
       </div>
       <div className="d-flex flex-row col-md-8 align-items-center justify-content-start">
-        <div>
+        <div className="col-md-12">
           <h1>{props.teamData.name}</h1>
           <h3>{props.teamData.abbrev}</h3>
           <div className="d-flex flex-row align-items-center justify-content-between">
-            <div className="d-flex flex-column col-md-6 align-items-center justify-content-start">
+            <div className="d-flex flex-column col-md-6 align-items-start justify-content-start">
               <p>Year Founded: {props.teamData.yearFounded}</p>
               <p>{props.teamData.conference} Conference</p>
+              <button type="button" className="btn btn-lg btn-info like-btn justify-self-center"><i className="far fa-heart"></i></button>
             </div>
             {props.teamData.players ?
             <div className="d-flex flex-column col-md-6 align-items-start justify-content-start">

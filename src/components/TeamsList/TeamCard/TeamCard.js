@@ -1,8 +1,6 @@
 import React from 'react';
-// import Routes from '../../config/routes';
 import { Link } from 'react-router-dom';
 import './TeamCard.css';
-// import TeamDetail from '../../TeamDetail/TeamDetail';
 
 const TeamCard = props => {
   return(

@@ -8,20 +8,20 @@ const ProfileNav = props => {
       <Link to='/profile' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
         <i className="fas fa-user"></i>Overview
       </Link>
-      <Link toName="/userfeed" className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
-        <i class="fas fa-comment-alt"></i>My Feed
+      <Link to="/userfeed" className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
+        <i className="fas fa-comment-alt"></i>My Feed
       </Link>
       <Link to='/profile/edit' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">  
         <i className="far fa-edit"></i>Update Info
       </Link>
-      <Link className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
+      <Link to='/profile' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
         <i className="fas fa-camera"></i>Update Picture
       </Link>
-      <Link className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
+      <Link to='/profile' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
         <i className="fas fa-key"></i>Change Password
       </Link>
-      <Link className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
-        <i class="fas fa-user-slash"></i>Delete Account
+      <Link to='/profile' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
+        <i className="fas fa-user-slash"></i>Delete Account
       </Link>
     </div>
   )
