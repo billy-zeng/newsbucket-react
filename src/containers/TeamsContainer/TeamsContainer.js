@@ -19,7 +19,6 @@ class TeamsContainer extends React.Component {
     .catch(err => console.log(err.response))
   }
 
-  // grab initial posts
   componentDidMount() {
     this.getTeams();
   };
