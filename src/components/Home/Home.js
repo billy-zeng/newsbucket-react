@@ -1,13 +1,18 @@
 import React from 'react';
 // Components
-// import ControlledCarousel from './ControlledCarousel/ControlledCarousel';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 // import HomeMain from './HomeMain/HomeMain';
 // CSS
-// import './Home.css';
+import './Home.css';
 
 const Home = props => {
   return (
-    <h1>Home Page</h1>
+    <Jumbotron className="text-light">
+      <h1>Welcome to NewsBucket!</h1>
+      <p>NewsBucket gathers the lastest news articles about your favorite NBA teams and players for you all in one place. 
+      <br/>
+      Get started by creating an account today and start adding to your bucket!</p>
+    </Jumbotron>
   );
 }
 

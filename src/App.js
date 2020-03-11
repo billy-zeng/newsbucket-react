@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 // Components
 import Routes from './config/routes';
 import MainNav from './components/MainNav/MainNav';
-// import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,7 +36,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <MainNav currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} logout={this.logout} />
-        <Routes />
+        <div id="mainContent">
+          <Routes />
+        </div>
+        <Footer />
       </div>
     );
   }
