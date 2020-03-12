@@ -8,12 +8,12 @@ import Container from 'react-bootstrap/Container';
 // import './Profile.css'
 
 const Profile = props => {
-  console.log(props.profile.players)
+  console.log(props.profile)
   return (
     <div id="profile-wrapper" className="d-flex flex-column align-items-center justify-content-center">
         <ProfileHeader profile={props.profile} />
         <Container id="profile-main" className="d-flex flex-row align-items-start justify-content-center">
-          <ProfileNav />
+          <ProfileNav logout={props.logout} />
           <ProfileMain profile={props.profile} />
           {/* <Routes profile={props.profile} updateUser={props.updateUser} posts={props.posts} updateUserPosts={props.updateUserPosts} /> */}
         </Container>

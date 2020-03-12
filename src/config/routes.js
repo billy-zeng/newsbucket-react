@@ -11,7 +11,13 @@ const Routes = props => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/profile' component={ProfileContainer} />
+      {/* <Route path='/profile' component={ProfileContainer} /> */}
+      <Route
+        path='/profile'
+        render={() => (
+          <ProfileContainer logout={props.logout} />
+        )}
+      />
       <Route path='/players/:playerId' component={PlayerDetail} />
       <Route path='/teams/:teamId' component={TeamDetail} />
       <Route path='/teams' component={TeamsContainer} />

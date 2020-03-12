@@ -22,7 +22,7 @@ class Login extends React.Component {
       .then(res => {
         this.props.setCurrentUser(res.data.data);
         this.props.handleClose();
-        this.props.history.push('/');
+        this.props.history.push('/profile');
       })
       .catch(err => console.log(err.response));
   };

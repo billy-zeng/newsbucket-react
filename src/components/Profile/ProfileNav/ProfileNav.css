@@ -17,3 +17,8 @@
 #profile-nav i {
   margin-right: .5em;
 }
+
+.account-modal {
+  text-align: center;
+  align-items: center;
+}

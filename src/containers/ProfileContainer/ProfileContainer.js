@@ -43,7 +43,7 @@ class ProfileContainer extends React.Component {
     console.log(this.state)
     return (
       this.state.profile
-        ? <Profile profile={this.state.profile} updateUser={this.updateUser} />
+        ? <Profile profile={this.state.profile} updateUser={this.updateUser} logout={this.props.logout} />
         : ""
     )
   }
