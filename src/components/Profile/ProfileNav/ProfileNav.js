@@ -67,8 +67,8 @@ class ProfileNav extends React.Component {
           </Modal.Header>
           <Modal.Body><p>Are you sure you want to delete your account?</p></Modal.Body>
           <Modal.Footer>
-            <a className="btn btn-secondary text-light" onClick={this.handleClose}>Cancel</a>
-            <a className="btn btn-danger text-light" onClick={this.handleDelete}>Delete Account</a>
+            <div className="btn btn-secondary text-light" onClick={this.handleClose}>Cancel</div>
+            <div className="btn btn-danger text-light" onClick={this.handleDelete}>Delete Account</div>
           </Modal.Footer>
         </Modal>
       </div>

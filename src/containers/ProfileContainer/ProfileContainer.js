@@ -4,33 +4,18 @@ import axios from 'axios';
 
 class ProfileContainer extends React.Component {
   state = {
-    profile: {},
-    // userPosts: []
+    profile: "",
   };
 
-  updateUser = user => {
-    this.setState({ profile: user });
-  }
-
-  // getUserPosts = () => {
-  //   const userId = localStorage.getItem('uId');
-  //   axios
-  //   .get(`${process.env.REACT_APP_API_URL}/posts?authorId=${userId}`)
-  //   .then(res => {
-  //     this.setState({
-  //       userPosts: res.data.data.reverse()
-  //     });
-  //   })
-  //   .catch(err => console.log(err.response))
+  // updateUser = user => {
+  //   this.setState({ profile: user });
   // }
 
   componentDidMount() {
     const userId = localStorage.getItem('uId');
-    console.log(userId)
     axios
       .get(`${process.env.REACT_APP_API_URL}/users/${userId}`, {withCredentials: true})
       .then(res => {
-        console.log(res.data)
         this.setState({
           profile: res.data
         });
@@ -40,6 +25,7 @@ class ProfileContainer extends React.Component {
   }
 
   render() {
+    console.log("[ProfileContainer render]")
     console.log(this.state)
     return (
       this.state.profile

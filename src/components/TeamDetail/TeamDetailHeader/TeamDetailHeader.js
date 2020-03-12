@@ -12,7 +12,7 @@ class TeamDetailHeader extends React.Component {
 
   addTeam = () =>{
     axios
-      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`,{withCredentials: true})
+      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`, {withCredentials: true})
       .then(res => {
         console.log(res.data)
         this.setState({
