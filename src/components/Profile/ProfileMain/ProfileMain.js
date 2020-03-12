@@ -22,11 +22,10 @@ const ProfileMain = props => {
           <small>Member Since</small>
         </div>
       </div> */}
-
       <div className="container d-flex flex-row align-items-center justify-content-center">
         <div className="container d-flex flex-row align-items-center justify-content-center">
           <ul>
-            <h3>My Teams</h3>
+            <h3>My Teams</h3>           
           </ul>
         </div>
         <div className="container d-flex flex-row align-items-center justify-content-center">

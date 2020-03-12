@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 // import './Profile.css'
 
 const Profile = props => {
+  console.log(props.profile.players)
   return (
     <div id="profile-wrapper" className="d-flex flex-column align-items-center justify-content-center">
         <ProfileHeader profile={props.profile} />
