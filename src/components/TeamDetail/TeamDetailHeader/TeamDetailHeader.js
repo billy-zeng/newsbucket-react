@@ -36,18 +36,26 @@ class TeamDetailHeader extends React.Component {
       .catch(err => console.log(err.response));
   }
 
-  componentDidMount(){
+  getUserTeams = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
       .then(res => {
-        console.log(res.data.teams)
-        if(res.data.teams.includes(this.props.teamData._id)) {
-          this.setState({
-            liked: true
-          });
-        }
+        console.log(res.data.teams);
+        res.data.teams.forEach(team => {
+          console.log(team._id, this.props.teamData._id);
+          if(team._id === this.props.teamData._id) {
+            console.log('true');
+            this.setState({
+              liked: true
+            });
+          }
+        });
       })
       .catch(err => console.log(err.response))
+  }
+  
+  componentDidMount(){
+    this.getUserTeams();
   }
 
   render(){

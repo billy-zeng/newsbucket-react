@@ -10,7 +10,7 @@ class PlayerDetailHeader extends React.Component {
     liked: false
   }
 
-  addPlayer = () =>{
+  addPlayer = () => {
     axios.defaults.withCredentials = true
     axios
       .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
@@ -23,7 +23,7 @@ class PlayerDetailHeader extends React.Component {
       .catch(err => console.log(err.response));
   }
 
-  removePlayer = () =>{
+  removePlayer = () => {
     axios.defaults.withCredentials = true
     axios
       .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
@@ -36,18 +36,23 @@ class PlayerDetailHeader extends React.Component {
       .catch(err => console.log(err.response));
   }
 
-  componentDidMount(){
+  getUserPlayers = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
-      .then(res => {
-        console.log(res.data.players)
-        if(res.data.players.includes(this.props.playerData._id)) {
+    .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
+    .then(res => {
+      res.data.players.forEach(player => {
+        if(player._id === this.props.playerData._id) {
           this.setState({
             liked: true
           });
         }
-      })
-      .catch(err => console.log(err.response))
+      });
+    })
+    .catch(err => console.log(err.response))
+  }
+
+  componentDidMount(){
+    this.getUserPlayers();
   }
 
   render(){
@@ -65,9 +70,7 @@ class PlayerDetailHeader extends React.Component {
                 <p>Age: {this.props.playerData.age}</p>
                 <p>Height: {this.props.playerData.height}  |  Weight: {this.props.playerData.weight}lb</p>
                 {
-                  this.props.playerData
-                    ? <Link to={`/teams/${this.props.playerData.team._id}`}>{this.props.playerData.team.name}</Link>
-                    : ""
+                this.props.playerData && <Link to={`/teams/${this.props.playerData.team._id}`}>{this.props.playerData.team.name}</Link>
                 } 
                 {
                   this.state.liked

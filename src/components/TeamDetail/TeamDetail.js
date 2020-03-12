@@ -6,7 +6,7 @@ import './TeamDetail.css';
 
 class TeamDetail extends React.Component {
   state = {
-    teamData: ""
+    teamData: null
   }
 
   getTeamData() {
@@ -30,9 +30,9 @@ class TeamDetail extends React.Component {
     console.log(this.state)
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
-        <TeamDetailHeader teamData={this.state.teamData} />
+        {this.state.teamData && <TeamDetailHeader teamData={this.state.teamData} />}
         <div>
-          {this.state.teamData? <ArticleContainer data={this.state.teamData} /> : ""}
+          {this.state.teamData && <ArticleContainer data={this.state.teamData} />}
         </div>
       </div>
     )

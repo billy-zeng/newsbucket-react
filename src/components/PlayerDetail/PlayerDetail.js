@@ -30,9 +30,9 @@ class PlayerDetail extends React.Component {
     console.log(this.state)
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
-        <PlayerDetailHeader playerData={this.state.playerData} />
+        {this.state.playerData && <PlayerDetailHeader playerData={this.state.playerData} />}
         <div>
-          {this.state.playerData? <ArticleContainer data={this.state.playerData} /> : ""}
+          {this.state.playerData ? <ArticleContainer data={this.state.playerData} /> : ""}
         </div>
       </div>
     )
