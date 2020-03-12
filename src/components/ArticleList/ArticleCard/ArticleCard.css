@@ -1,0 +1,9 @@
+.article-image {
+  max-width: 170px;
+  max-height: 170px;
+  margin: 1em;
+}
+
+.article-card {
+  border-bottom: 1px solid #ddd;
+}

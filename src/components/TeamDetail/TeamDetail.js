@@ -31,9 +31,7 @@ class TeamDetail extends React.Component {
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
         {this.state.teamData && <TeamDetailHeader teamData={this.state.teamData} />}
-        <div>
-          {this.state.teamData && <ArticleContainer data={this.state.teamData} />}
-        </div>
+        {this.state.teamData && <ArticleContainer data={this.state.teamData} />}
       </div>
     )
   }

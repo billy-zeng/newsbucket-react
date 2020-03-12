@@ -6,7 +6,7 @@ import './PlayerDetail.css';
 
 class PlayerDetail extends React.Component {
   state = {
-    playerData: "",
+    playerData: null
   }
 
   getPlayerData() {
@@ -31,9 +31,7 @@ class PlayerDetail extends React.Component {
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
         {this.state.playerData && <PlayerDetailHeader playerData={this.state.playerData} />}
-        <div>
-          {this.state.playerData ? <ArticleContainer data={this.state.playerData} /> : ""}
-        </div>
+        {this.state.playerData && <ArticleContainer data={this.state.playerData} />}
       </div>
     )
   }

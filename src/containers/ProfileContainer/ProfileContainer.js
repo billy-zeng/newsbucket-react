@@ -4,7 +4,7 @@ import axios from 'axios';
 
 class ProfileContainer extends React.Component {
   state = {
-    profile: "",
+    profile: null,
   };
 
   // updateUser = user => {
@@ -28,9 +28,7 @@ class ProfileContainer extends React.Component {
     console.log("[ProfileContainer render]")
     console.log(this.state)
     return (
-      this.state.profile
-        ? <Profile profile={this.state.profile} updateUser={this.updateUser} logout={this.props.logout} />
-        : ""
+      this.state.profile && <Profile profile={this.state.profile} updateUser={this.updateUser} logout={this.props.logout} />
     )
   }
 }
