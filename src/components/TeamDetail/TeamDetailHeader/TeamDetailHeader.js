@@ -11,8 +11,9 @@ class TeamDetailHeader extends React.Component {
   }
 
   addTeam = () =>{
+    axios.defaults.withCredentials = true
     axios
-      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`, {withCredentials: true})
+      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`)
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -23,8 +24,9 @@ class TeamDetailHeader extends React.Component {
   }
 
   removeTeam = () =>{
-    axios
-      .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`, {withCredentials: true})
+    axios.defaults.withCredentials = true
+    axios    
+      .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`)
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -38,7 +40,7 @@ class TeamDetailHeader extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
       .then(res => {
-        console.log(res.data)
+        console.log(res.data.teams)
         if(res.data.teams.includes(this.props.teamData._id)) {
           this.setState({
             liked: true

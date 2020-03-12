@@ -11,8 +11,9 @@ class PlayerDetailHeader extends React.Component {
   }
 
   addPlayer = () =>{
+    axios.defaults.withCredentials = true
     axios
-      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`,{withCredentials: true})
+      .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -23,8 +24,9 @@ class PlayerDetailHeader extends React.Component {
   }
 
   removePlayer = () =>{
+    axios.defaults.withCredentials = true
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`, {withCredentials: true})
+      .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -38,7 +40,7 @@ class PlayerDetailHeader extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
       .then(res => {
-        console.log(res.data)
+        console.log(res.data.players)
         if(res.data.players.includes(this.props.playerData._id)) {
           this.setState({
             liked: true
