@@ -7,7 +7,7 @@ const Footer = props => {
   return(
     <footer className="d-flex flex-column align-items-center justify-content-center">
       <Container className="d-flex flex-column align-items-center justify-content-center p-1">
-        <div className="d-flex flex-row align-items-center justify-content-center p-1">
+        <div className="d-flex flex-row align-items-center justify-content-center">
           <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-facebook-square"></i></a>
           <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-instagram-square"></i></a>
           <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-github-square"></i></a>

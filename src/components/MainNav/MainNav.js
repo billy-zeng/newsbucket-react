@@ -65,13 +65,13 @@ class MainNav extends React.Component {
               ) : (
               <>
                 <NavItem>
-                  <Link className="nav-link" href="#" to="/teams">Teams</Link>
+                  <Link className="nav-link" to="/teams">Teams</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" href="#" to="/">My Feed</Link>
+                  <Link className="nav-link" to="/userfeed">My Feed</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" href="#" to="/profile">Profile</Link>
+                  <Link className="nav-link" to="/profile">Profile</Link>
                 </NavItem>
                 <NavItem className="nav-link" onClick={this.props.logout}>Logout</NavItem>
               </>
