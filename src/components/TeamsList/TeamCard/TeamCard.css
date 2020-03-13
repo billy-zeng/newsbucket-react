@@ -1,0 +1,14 @@
+.card-img-top {
+  border: 1px solid silver;
+  padding: 1.2em;
+  max-height: 270px;
+  max-width: 270px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-body li {
+  list-style: none;
+}

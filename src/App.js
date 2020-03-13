@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Components
+import Routes from './config/routes';
+import MainNav from './components/MainNav/MainNav';
+import Footer from './components/Footer/Footer'
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+class App extends React.Component {
+  state = {
+    currentUser: localStorage.getItem('uId')
+  };
+
+  setCurrentUser = userId => {
+    this.setState({ currentUser: userId })
+    localStorage.setItem('uId', userId);
+  };
+
+  logout = () => {
+    axios
+      .delete(`${process.env.REACT_APP_API_URL}/auth/logout`, {withCredentials: true})
+      .then(res => {
+        localStorage.removeItem('uId');
+        this.setState({ currentUser: null });
+        this.props.history.push('/');
+      })
+      .catch(err => console.log(err.response));
+  };
+
+  render(){
+    return (
+      <div className="App">
+        <MainNav currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} logout={this.logout} />
+        <div id="mainContent">
+          <Routes logout={this.logout} />
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);

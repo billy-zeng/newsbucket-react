@@ -1,0 +1,24 @@
+/* .profile-nav-btn {
+  min-width: 100%;
+} */
+
+#profile-nav {
+  height: 35em;
+  background-color: whitesmoke;
+  padding: 1em 0;
+  margin: 1em 0;
+}
+
+#profile-nav .btn {
+  width: 12em;
+  margin: .2em 0;
+}
+
+#profile-nav i {
+  margin-right: .5em;
+}
+
+.account-modal {
+  text-align: center;
+  align-items: center;
+}

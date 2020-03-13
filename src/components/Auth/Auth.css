@@ -1,0 +1,16 @@
+.button-wrapper {
+  text-align: center;
+}
+
+div > h4 {
+  text-align: center;
+}
+
+.auth-link {
+  text-align: center;
+  color: royalblue;
+}
+
+.auth-link:hover {
+  cursor: pointer;
+}

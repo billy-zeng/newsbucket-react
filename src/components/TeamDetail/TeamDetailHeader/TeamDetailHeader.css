@@ -1,0 +1,10 @@
+.team-logo {
+  border: 1px solid silver;
+  padding: 1.2em;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+#teamDetailCard {
+  border-bottom: 1px solid grey;
+}

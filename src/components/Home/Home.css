@@ -1,0 +1,14 @@
+.landing p {
+  margin-top: 1.5em;
+  /* min-height: 50vh; */
+  font-size: 1.2em;
+}
+
+.landing {
+  background-image: url("/nick-jio-57rD2oDZquc-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-bottom: 0;
+  min-height: 80vh;
+}
