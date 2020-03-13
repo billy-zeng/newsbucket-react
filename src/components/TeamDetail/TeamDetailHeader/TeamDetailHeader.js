@@ -15,7 +15,6 @@ class TeamDetailHeader extends React.Component {
     axios
       .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           liked: true
         })
@@ -28,7 +27,6 @@ class TeamDetailHeader extends React.Component {
     axios    
       .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/teams/${this.props.teamData._id}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           liked: false
         })
@@ -40,11 +38,8 @@ class TeamDetailHeader extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`, {withCredentials: true})
       .then(res => {
-        console.log(res.data.teams);
         res.data.teams.forEach(team => {
-          console.log(team._id, this.props.teamData._id);
           if(team._id === this.props.teamData._id) {
-            console.log('true');
             this.setState({
               liked: true
             });

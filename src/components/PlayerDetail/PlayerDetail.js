@@ -13,7 +13,6 @@ class PlayerDetail extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/players/${this.props.match.params.playerId}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           playerData: res.data
         });       
@@ -26,8 +25,6 @@ class PlayerDetail extends React.Component {
   }
 
   render() {
-    console.log(this.props.match.params.playerId)
-    console.log(this.state)
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
         {this.state.playerData && <PlayerDetailHeader playerData={this.state.playerData} />}

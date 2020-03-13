@@ -11,7 +11,6 @@ class ArticleContainer extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/news/everything/${this.props.data.name}`)
       .then(res => {
-        console.log(res.data.articles)
         this.setState({
           articles: res.data.articles
         });
@@ -24,8 +23,6 @@ class ArticleContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props.data.name)
-    console.log(this.state.articles)
     return (
       <ArticleList articles={this.state.articles} />
     )

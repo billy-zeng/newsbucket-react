@@ -1,12 +1,9 @@
 import React from 'react';
-import './ArticleList.css';
 import ArticleCard from './ArticleCard/ArticleCard';
 
 class ArticleList extends React.Component {
 
   displayArticles = articles => {
-    console.log("[ArticleList] display teams")
-    
     return articles.map((article, i)  => {
       return (
         <ArticleCard article={article} key={i} />

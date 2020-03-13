@@ -32,7 +32,6 @@ class ProfileNav extends React.Component {
     axios
       .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}`)
       .then(res => {
-        console.log(res)
         this.handleClose();
         this.props.history.push('/');
       })

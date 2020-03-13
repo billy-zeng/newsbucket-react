@@ -11,7 +11,6 @@ class TeamsContainer extends React.Component {
     axios
     .get(`${process.env.REACT_APP_API_URL}/teams/`)
     .then(res => {
-      console.log(res.data)
       this.setState({
         teams: res.data
       });
@@ -24,7 +23,6 @@ class TeamsContainer extends React.Component {
   };
 
   render() {
-    console.log(this.state.teams)
     return (
       <TeamsList teams={this.state.teams} />
     )

@@ -13,7 +13,6 @@ class TeamDetail extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/teams/${this.props.match.params.teamId}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           teamData: res.data
         });        
@@ -26,8 +25,6 @@ class TeamDetail extends React.Component {
   }
 
   render() {
-    console.log(this.props.match.params.teamId)
-    console.log(this.state)
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
         {this.state.teamData && <TeamDetailHeader teamData={this.state.teamData} />}

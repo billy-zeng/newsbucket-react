@@ -15,7 +15,6 @@ class PlayerDetailHeader extends React.Component {
     axios
       .put(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           liked: true
         })
@@ -28,7 +27,6 @@ class PlayerDetailHeader extends React.Component {
     axios
       .delete(`${process.env.REACT_APP_API_URL}/users/${this.state.userId}/players/${this.props.playerData._id}`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           liked: false
         })

@@ -8,7 +8,6 @@ import TeamDetail from '../components/TeamDetail/TeamDetail';
 import UserFeed from '../components/UserFeed/UserFeed';
 
 const Routes = props => {
-  // console.log(props)
   return (
     <Switch>
       <Route exact path='/' component={Home} />

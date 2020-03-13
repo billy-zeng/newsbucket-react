@@ -40,11 +40,9 @@ class MainNav extends React.Component {
   render(){
     return (
       <Navbar className="navbar-expand-lg navbar-light bg-light ">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <Navbar.Collapse id="navbarTogglerDemo01">
-          <Navbar.Brand href="/"><h2 id="page-title">NewsBucket <i className="fas fa-basketball-ball"></i></h2></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="/"><h2 id="page-title" className="nav-logo">NewsBucket <i className="fas fa-basketball-ball"></i></h2></Navbar.Brand>
+          <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto mt-2 mt-lg-0">
             {!this.props.currentUser ? (
               <>

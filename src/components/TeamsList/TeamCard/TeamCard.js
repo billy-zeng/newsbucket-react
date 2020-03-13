@@ -10,14 +10,11 @@ const TeamCard = props => {
         <div className="card-body">
           <h5 className="card-title"><Link to={`/teams/${props.teamData._id}`}>{props.teamData.name}</Link></h5>
           <h6 className="card-subtitle">{props.teamData.abbrev}</h6>
-          {/* <ul> */}
-            {/* <p>Players</p> */}
             <li><Link to={`/players/${props.teamData.players[0]._id}`}>{props.teamData.players[0].name}</Link></li>
             <li><Link to={`/players/${props.teamData.players[1]._id}`}>{props.teamData.players[1].name}</Link></li>
             <li><Link to={`/players/${props.teamData.players[2]._id}`}>{props.teamData.players[2].name}</Link></li>
             <li><Link to={`/players/${props.teamData.players[3]._id}`}>{props.teamData.players[3].name}</Link></li>
             <li><Link to={`/players/${props.teamData.players[4]._id}`}>{props.teamData.players[4].name}</Link></li>
-          {/* </ul> */}
         </div>
       </div>
     </div>
