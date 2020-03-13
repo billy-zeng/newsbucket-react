@@ -57,7 +57,7 @@ class TeamDetailHeader extends React.Component {
     return (
       <Container id="teamDetailCard" className="d-flex flex-row align-items-start justify-content-center mt-5 mb-3 pb-4">
         <div className="d-flex col-md-4 align-items-center justify-content-center">
-          <img class="team-logo" src={this.props.teamData.logo} alt={this.props.teamData.name} />
+          <img className="team-logo" src={this.props.teamData.logo} alt={this.props.teamData.name} />
         </div>
         <div className="d-flex flex-row col-md-8 align-items-center justify-content-start">
           <div className="col-md-12">

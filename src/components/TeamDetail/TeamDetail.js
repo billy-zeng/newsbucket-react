@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import TeamDetailHeader from './TeamDetailHeader/TeamDetailHeader';
 import ArticleContainer from '../../containers/ArticleContainer/ArticleContainer';
-import './TeamDetail.css';
 
 class TeamDetail extends React.Component {
   state = {

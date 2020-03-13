@@ -12,7 +12,6 @@ class ArticleList extends React.Component {
   };
 
   render(){
-    console.log(this.props)
     return(
       this.props.articles.length > 0
         ? <ul id="articlesList" className="align-items-center justify-content-center container">{this.displayArticles(this.props.articles)}</ul>
