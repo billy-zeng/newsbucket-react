@@ -19,7 +19,7 @@ class ArticleList extends React.Component {
     return(
       this.props.articles.length > 0
         ? <ul id="articlesList" className="align-items-center justify-content-center container">{this.displayArticles(this.props.articles)}</ul>
-        : <p>"No articles found, please try again."</p>
+        : <p>No articles found, please try again.</p>
     )
   }
 }

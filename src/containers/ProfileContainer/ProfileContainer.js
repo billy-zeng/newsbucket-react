@@ -7,9 +7,9 @@ class ProfileContainer extends React.Component {
     profile: null,
   };
 
-  // updateUser = user => {
-  //   this.setState({ profile: user });
-  // }
+  updateUser = user => {
+    this.setState({ profile: user });
+  }
 
   componentDidMount() {
     const userId = localStorage.getItem('uId');
@@ -19,14 +19,11 @@ class ProfileContainer extends React.Component {
         this.setState({
           profile: res.data
         });
-        // this.getUserPosts();
       })
       .catch(err => console.log(err.response))
   }
 
   render() {
-    console.log("[ProfileContainer render]")
-    console.log(this.state)
     return (
       this.state.profile && <Profile profile={this.state.profile} updateUser={this.updateUser} logout={this.props.logout} />
     )
