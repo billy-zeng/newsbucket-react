@@ -5,13 +5,14 @@ import ProfileContainer from '../containers/ProfileContainer/ProfileContainer';
 import PlayerDetail from '../components/PlayerDetail/PlayerDetail';
 import TeamsContainer from '../containers/TeamsContainer/TeamsContainer';
 import TeamDetail from '../components/TeamDetail/TeamDetail';
+import UserFeed from '../components/UserFeed/UserFeed';
 
 const Routes = props => {
   // console.log(props)
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      {/* <Route path='/profile' component={ProfileContainer} /> */}
+      <Route path='/userfeed' component={UserFeed} />
       <Route
         path='/profile'
         render={() => (
