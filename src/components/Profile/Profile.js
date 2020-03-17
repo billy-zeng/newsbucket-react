@@ -10,8 +10,7 @@ const Profile = props => {
         <ProfileHeader profile={props.profile} />
         <Container id="profile-main" className="d-flex flex-row align-items-start justify-content-center">
           <ProfileNav logout={props.logout} />
-          {/* {props.profile ? <ProfileMain profile={props.profile} /> : ""} */}
-          {props.profile && <Routes profile={props.profile} updateUser={props.updateUser} />}
+          {props.profile && <Routes profile={props.profile} teams={props.teams} players={props.players} updateUser={props.updateUser} />}
         </Container>
     </div>
   );

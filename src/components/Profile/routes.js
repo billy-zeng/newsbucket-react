@@ -15,7 +15,7 @@ const Routes = props => {
       <Route
         path='/profile'
         render={() => (
-          <ProfileMain profile={props.profile} />
+          <ProfileMain profile={props.profile} teams={props.teams} players={props.players} />
         )}
       />
     </Switch>
