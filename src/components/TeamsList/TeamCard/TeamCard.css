@@ -12,3 +12,7 @@
 .card-body li {
   list-style: none;
 }
+
+.card-body {
+  font-size: 1.1rem;
+}

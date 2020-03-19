@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import PlayerDetailHeader from './PlayerDetailHeader/PlayerDetailHeader';
 import ArticleContainer from '../../containers/ArticleContainer/ArticleContainer';
-import './PlayerDetail.css';
 
 class PlayerDetail extends React.Component {
   state = {

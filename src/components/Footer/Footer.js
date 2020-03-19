@@ -10,8 +10,8 @@ const Footer = props => {
         <div className="d-flex flex-row align-items-center justify-content-center">
           <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-facebook-square"></i></a>
           <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-instagram-square"></i></a>
-          <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-github-square"></i></a>
-          <a className="mr-1 ml-1" href="/"><i className="text-dark fab fa-linkedin"></i></a>
+          <a className="mr-1 ml-1" href="https://github.com/billy-zeng/newsbucket-react"><i className="text-dark fab fa-github-square"></i></a>
+          <a className="mr-1 ml-1" href="https://www.linkedin.com/in/billy-zeng/"><i className="text-dark fab fa-linkedin"></i></a>
         </div>
       </Container>
       <p className="copyright">&copy; Billy Zeng 2020</p>
